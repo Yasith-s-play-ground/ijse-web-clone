@@ -1,0 +1,180 @@
+.logo_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    /* Adjust height as needed */
+    overflow: hidden;
+    /* This hides any scrollbars */
+    /* opacity: 0.5; */
+
+}
+
+.social_media_logos :not(img) {
+    opacity: 0.5;
+}
+
+.ijse_logo :not(img) {
+    opacity: 0.5;
+}
+
+.ijse_logo {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.social_media_logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.social_media_logos img {
+    width: 50px;
+    margin: 10px;
+}
+
+.body_division {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidenav {
+    overflow: hidden;
+    min-width: 200px;
+    background-color: lightblue;
+    font-size: 20px;
+    height: 75vh;
+}
+
+.scrollable-content {
+    height: 70vh;
+    /* Fills the viewport height */
+    overflow-y: auto;
+    /* Enables vertical scrolling if content overflows */
+}
+
+.whole_body_division {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ijse_logo_and_side_nav_division {
+    min-width: 200px;
+}
+
+.footer_division{
+    align-content: center;
+    /* iterates through list until available font comes */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+.social_media_logos_and_article_content_division{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.hidden {
+    display: none; /* Initially hide the popup menu */
+  }
+  
+  #coursesPopupMenu {
+    position: absolute; /* Position the menu relative to the hyperlink */
+    background-color: white; /* Set background color */
+    border: 1px solid #ddd; /* Add a border */
+    padding: 5px; /* Add padding for spacing */
+  }
+  
+  #coursesPopupMenu ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+  
+  #coursesPopupMenu li {
+    margin: 5px 0; /* Add space between menu items */
+  }
+
+  .image-container {
+    width: 1000px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .image-container img {
+    width: 100%; /* Images fill the container width */
+    height: 100%; /* Images fill the container height */
+    object-fit: cover; /* Crop images to fit the container while maintaining aspect ratio */
+  }
+  
+  .hidden {
+    display: none; /* Hide initially hidden images */
+  }
+  
+  .active {
+    display: block; /* Show the active image */
+  }
+
+
+  @keyframes slideImages {
+    0% { transform: translateX(0); } /* Start from left */
+    100% { transform: translateX(-100%); } /* Move all images to the left by their total width */
+  }
+
+
+  /* New style for the cloned image */
+/* .bottom_images_set img:first-child {
+    position: absolute; /* Overlap the other images */
+    /*left: 100%; /* Start the cloned image outside the view */
+ /* } */
+/*   
+  @keyframes slideImages {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-calc(100% + 1 image width)); } /* Slide to reveal all images and the cloned first image */
+ /* } */
+
+  .bottom_images_set{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    animation: slideImages 20s infinite linear;
+  }
+
+  .dropdown-container {
+    position: relative; /* Make the container relative for absolute positioning of the dropdown */
+  }
+  
+  .dropdown-container a {
+    /* Styles for the hyperlink itself */
+    /* Remove underline for a cleaner look */
+    /* text-decoration: none;  */
+    color: inherit; /* Inherit color from parent element */
+  }
+  
+  .dropdown-menu {
+    position: absolute; /* Position the menu absolutely relative to the container */
+    top: 100%; /* Position below the hyperlink */
+    right: 0; /* Align right with the hyperlink */
+    background-color: white; /* Example background color */
+    border: 1px solid #ddd; /* Example border */
+    padding: 5px; /* Example padding */
+    display: none; /* Initially hidden */
+    margin: 5px;
+  }
+  
+  .dropdown-menu li {
+    /* Styles for the menu items */
+    list-style: none; /* Remove default bullet points */
+    padding: 5px; /* Add padding for each menu item */
+  }
+  
+  .dropdown-container:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover over the container */
+  }
